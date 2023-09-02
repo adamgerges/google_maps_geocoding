@@ -5,6 +5,16 @@ This script allows you to geocode addresses using the Google Maps API. By provid
 
 ## How the Script Works
 
+The script works by reading addresses from column A of the `input.csv` file. Each address in column A is then used to query the Google Maps Geocoding API.
+
+For each successful query, the script retrieves and formats the address into seven components: street, secondary street, county, state, country, postal code, and city. The API might not always provide all seven components for every address, so some fields may remain empty in the output.
+
+The formatted address data is then inserted into the first available set of seven consecutive columns without populated data in the `output.csv` file. This ensures that existing data in the CSV isn't overwritten.
+
+To control the number of rows processed from the `input.csv`, you can modify the `ROWS_TO_PROCESS` constant in the script. By default, this is set to 1000, but you can adjust it as per your needs.
+
+
+
 The script reads addresses from the `input.csv` file and queries the Google Maps Geocoding API for each address. For each successful query, the script retrieves and formats the address into seven components: street, secondary street, county, state, country, postal code, and city.
 
 The formatted address data is then inserted into the first available set of seven consecutive columns without populated data in the `output.csv` file. This ensures that existing data in the CSV isn't overwritten.
