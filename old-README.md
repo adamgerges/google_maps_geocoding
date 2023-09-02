@@ -3,14 +3,6 @@
 
 This script allows you to geocode addresses using the Google Maps API. By providing a list of addresses in a CSV file, you can retrieve detailed address components, such as street, city, state, country, and postal code.
 
-## How the Script Works
-
-The script reads addresses from the `input.csv` file and queries the Google Maps Geocoding API for each address. For each successful query, the script retrieves and formats the address into seven components: street, secondary street, county, state, country, postal code, and city.
-
-The formatted address data is then inserted into the first available set of seven consecutive columns without populated data in the `output.csv` file. This ensures that existing data in the CSV isn't overwritten.
-
-If you wish to limit the number of rows processed from the `input.csv`, you can modify the `ROWS_TO_PROCESS` constant in the script.
-
 ## Prerequisites
 
 - Ensure you have Python installed on your machine.
