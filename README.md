@@ -54,3 +54,23 @@ If you wish to limit the number of rows processed from the `input.csv`, you can 
 ## License
 
 This project is open-source. Feel free to clone, modify, and distribute as per your needs.
+
+## Enhanced Geocoding with Business Details
+
+In addition to the basic geocoding features, we've introduced a new script named `google_maps_geocoding_api_website.py`. This script not only retrieves address components but also fetches business details available on Google Maps, including:
+- Opening hours
+- Phone number
+- Website
+
+To utilize this functionality:
+1. Ensure you have the required libraries installed:
+  ```
+  pip install requests
+  ```
+2. Update the `GOOGLE_API_KEY` constant in the `google_maps_geocoding_api_website.py` script with your Google Maps API key.
+3. Populate the `input.csv` file with the addresses you wish to geocode.
+4. Run the script:
+  ```
+  python google_maps_geocoding_api_website.py
+  ```
+5. Check the `output.csv` file for the geocoded data, including the business details mentioned above.
